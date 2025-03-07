@@ -13,10 +13,9 @@ namespace ApiProjectKamp.WebApi.Controllers
     {
         private readonly ApiContext _context;
 
-        public ContactsController(ApiContext context, IMapper mapper)
+        public ContactsController(ApiContext context)
         {
             _context = context;
-            _mapper = mapper;
         }
 
         [HttpGet]
