@@ -1,0 +1,62 @@
+﻿﻿[
+  {
+    "nameSurname": "Elif Yıldız",
+    "title": "Gastronomi Uzmanı",
+    "comment": "Sunumlar harikaydı, lezzetler ise adeta bir sanat eseri gibiydi. Şefin emeği takdire şayan.",
+    "imageUrl": "test"
+  },
+  {
+    "nameSurname": "Mert Aslan",
+    "title": "Yemek Bloggerı",
+    "comment": "Tatlılardan ana yemeklere kadar her şey kusursuzdu. Özellikle kuzu tandır unutulmazdı!",
+    "imageUrl": "test"
+  },
+  {
+    "nameSurname": "Ayşe Demir",
+    "title": "Müşteri",
+    "comment": "Ambiyansı çok beğendim. Ailemle geçirdiğim en keyifli akşamlardan biriydi.",
+    "imageUrl": "test"
+  },
+  {
+    "nameSurname": "Serkan Koç",
+    "title": "Lezzet Eleştirmeni",
+    "comment": "Menü seçkisi oldukça dengeliydi. Deniz ürünleri taze ve ustalıkla hazırlanmıştı.",
+    "imageUrl": "test"
+  },
+  {
+    "nameSurname": "Gizem Uslu",
+    "title": "Influencer",
+    "comment": "Görsel sunumlar Instagram’a yakışır güzellikteydi! Lezzet ve estetik bir arada.",
+    "imageUrl": "test"
+  },
+  {
+    "nameSurname": "Burak Karaca",
+    "title": "Yemek Fotoğrafçısı",
+    "comment": "Fotoğraf çekmeye doyamadım! Şık sunumların yanında sıcak ve samimi bir ortam vardı.",
+    "imageUrl": "test"
+  },
+  {
+    "nameSurname": "Melis Aksoy",
+    "title": "Ziyaretçi",
+    "comment": "Fiyat performans açısından mükemmel. Özellikle öğle menüleri çok avantajlı.",
+    "imageUrl": "test"
+  },
+  {
+    "nameSurname": "Baran Tuncel",
+    "title": "Kurumsal Müşteri",
+    "comment": "İş yemekleri için ideal bir mekan. Sessiz, elit ve servis hızı çok iyi.",
+    "imageUrl": "test"
+  },
+  {
+    "nameSurname": "Seda Karaman",
+    "title": "Beslenme Uzmanı",
+    "comment": "Vejetaryen ve sağlıklı seçeneklerin olması çok hoşuma gitti. Lezzetten ödün verilmemiş.",
+    "imageUrl": "test"
+  },
+  {
+    "nameSurname": "Alp Yılmaz",
+    "title": "Yemek Yazarı",
+    "comment": "Klasik tatlara modern dokunuşlar yapılmış. Menüdeki özgünlük dikkat çekiciydi.",
+    "imageUrl": "test"
+  }
+]
