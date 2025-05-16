@@ -20,7 +20,8 @@ namespace ApiProjectKamp.WebApi.Controllers
         [HttpGet]
         public IActionResult YummyEventList()
         {
-            var values = _context.Categories.ToList();
+            var values = _context.YummyEvents.ToList();
+
             return Ok(values);
         }
 

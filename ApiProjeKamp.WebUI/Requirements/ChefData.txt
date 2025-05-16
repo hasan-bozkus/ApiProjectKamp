@@ -1,0 +1,21 @@
+﻿﻿[
+  {
+    "nameSurname": "Ahmet Korkmaz",
+    "title": "Baş Şef",
+    "description": "20 yıllık deneyimiyle Türk ve Akdeniz mutfağında ustalaşmış, restoranımızın lezzet mimarı.",
+    "imageUrl": "test"
+  },
+  {
+    "nameSurname": "Elif Yıldız",
+    "title": "Tatlı Şefi",
+    "description": "Fransız pastacılığı eğitimi almış, özgün tatlı sunumlarıyla misafirlerimize görsel ve lezzet şöleni yaşatıyor.",
+    "imageUrl": "test"
+  },
+  {
+    "nameSurname": "Mehmet Alkan",
+    "title": "Izgara Uzmanı",
+    "description": "Etin her halini bilen, özel marine tarifleri ve pişirme teknikleriyle müdavim kazandıran bir ustamız.",
+    "imageUrl": "test"
+  }
+]
+/yummy-red-1.0.0/assets/img/chefs/chefs-1.jpg

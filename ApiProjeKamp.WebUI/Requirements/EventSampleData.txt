@@ -1,0 +1,40 @@
+﻿﻿[
+  {
+    "title": "Doğum Günü Organizasyonu",
+    "description": "Sevdiklerinizle unutulmaz bir doğum günü kutlaması için özel süslemeler, pasta servisi ve müzikli eğlence sizi bekliyor.",
+    "imageUrl": "test",
+    "status": true,
+    "price": 1500
+  },
+  {
+    "title": "İş Toplantısı Yemeği",
+    "description": "Kurumsal toplantılarınız için sessiz ve konforlu özel alan, projektör desteği ve zengin menü seçenekleri.",
+    "imageUrl": "test",
+    "status": true,
+    "price": 2000
+  },
+  {
+    "title": "Nişan Kutlaması",
+    "description": "Aileniz ve sevdiklerinizle birlikte romantik bir ortamda nişanınızı kutlamak için ideal bir organizasyon.",
+    "imageUrl": "test",
+    "status": true,
+    "price": 3000
+  },
+  {
+    "title": "Yıl Dönümü Yemeği",
+    "description": "Özel çiftlere özel masa süslemeleri, canlı müzik ve mum ışığında yemek keyfi.",
+    "imageUrl": "test",
+    "status": true,
+    "price": 1200
+  },
+  {
+    "title": "Mezuniyet Kutlaması",
+    "description": "Gençler için eğlenceli bir akşam, DJ performansı ve mezuniyet pastası ile unutulmaz bir gece.",
+    "imageUrl": "test",
+    "status": true,
+    "price": 1800
+  }
+]
+
+
+/yummy-red-1.0.0/assets/img/events-1.jpg
