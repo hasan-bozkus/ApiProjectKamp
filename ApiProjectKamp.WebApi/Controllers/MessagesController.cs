@@ -61,5 +61,12 @@ namespace ApiProjectKamp.WebApi.Controllers
             await _context.SaveChangesAsync();
             return Ok("Güncelleme işlemi başarılı");
         }
+
+        [HttpGet("MessageListByIsReadFalse")]
+        public async Task<IActionResult> MessageListByIsReadFalse()
+        {
+            var value = await _context.Messages.Where(x => x.IsRead == false).ToListAsync();
+            return Ok(value);
+        }
     }
 }

@@ -1,0 +1,32 @@
+﻿﻿[
+  {
+    "description": "Yeni bir rezervasyon talebi alındı. Ahmet Demir isimli müşteri 4 kişilik masa için 20:00 saatine rezervasyon yaptı.",
+    "iconUrl": "/icons/reservation.png",
+    "notificationDate": "2025-05-27T08:30:00",
+    "isRead": false
+  },
+  {
+    "description": "Bugün saat 19:00'daki doğum günü organizasyonu için özel süslemeler unutmayın.",
+    "iconUrl": "/icons/birthday.png",
+    "notificationDate": "2025-05-27T07:15:00",
+    "isRead": false
+  },
+  {
+    "description": "Mutfak stoğunda domates, mozarella ve fesleğen miktarları azaldı. Günlük sipariş kontrolü yapılmalı.",
+    "iconUrl": "/icons/warning.png",
+    "notificationDate": "2025-05-26T18:10:00",
+    "isRead": true
+  },
+  {
+    "description": "Yeni yorum: Kullanıcı Selin Aydın, restoran hakkında 5 yıldız verdi ve 'Yemekler harika!' yorumu yaptı.",
+    "iconUrl": "/icons/review.png",
+    "notificationDate": "2025-05-26T21:45:00",
+    "isRead": true
+  },
+  {
+    "description": "Bugünkü menüye 'Izgara Levrek' ve 'Köz Patlıcan Mezesi' eklendi. Menü sayfasını güncellemeyi unutmayın.",
+    "iconUrl": "/icons/menu.png",
+    "notificationDate": "2025-05-27T09:00:00",
+    "isRead": false
+  }
+]
