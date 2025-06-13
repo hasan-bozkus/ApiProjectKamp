@@ -1,5 +1,7 @@
 ﻿using ApiProjectKamp.WebApi.Context;
+using ApiProjectKamp.WebApi.Dtos.CategoryDtos;
 using ApiProjectKamp.WebApi.Entities;
+using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,11 +11,13 @@ namespace ApiProjectKamp.WebApi.Controllers
     [ApiController]
     public class CategoriesController : ControllerBase
     {
+        private readonly IMapper _mapper;
         private readonly ApiContext _context;
 
-        public CategoriesController(ApiContext context)
+        public CategoriesController(ApiContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
         [HttpGet]
@@ -24,9 +28,10 @@ namespace ApiProjectKamp.WebApi.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateCategory(Category category)
+        public IActionResult CreateCategory(CreateCategoryDto createCategoryDto)
         {
-            _context.Categories.Add(category);
+            var value = _mapper.Map<Category>(createCategoryDto);
+            _context.Categories.Add(value);
             _context.SaveChanges();
             return Ok("Kategori ekleme işlemi başarılı");
         }
@@ -40,7 +45,7 @@ namespace ApiProjectKamp.WebApi.Controllers
             return Ok("Kategori silme işlemi başarılı.");
         }
 
-        [HttpGet("GetCategory")]
+        [HttpGet("GetCategory/{id}")]
         public IActionResult GetCategory(int id)
         {
             var values = _context.Categories.Find(id);
@@ -48,9 +53,10 @@ namespace ApiProjectKamp.WebApi.Controllers
         }
 
         [HttpPut]
-        public IActionResult UpdateCategory(Category category)
+        public IActionResult UpdateCategory(UpdateCategoryDto updateCategoryDto)
         {
-            _context.Categories.Update(category);
+            var result = _mapper.Map<Category>(updateCategoryDto);
+            _context.Categories.Update(result);
             _context.SaveChanges();
             return Ok("Kategori güncelleme işlemi başarılı.");
         }
