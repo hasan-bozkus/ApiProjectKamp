@@ -1,0 +1,41 @@
+﻿@model CreateFeatureDto
+@{
+    ViewData["Title"] = "CreateFeature";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<section class="section">
+    <div class="section-body">
+        <div class="row">
+            <div class="col-12 col-md-12 col-lg-6">
+
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Öne Çıkan Alan Ekleme Sayfası</h4>
+                    </div>
+                    <div class="card-body">
+                        <form method="post">
+                            <label>Başlık</label>
+                            <input type="text" asp-for="Title" class="form-control" />
+                            <br />
+                            <label>Alt Başlık</label>
+                            <input type="text" asp-for="SubTitle" class="form-control" />
+                            <br />
+                            <label>Görsel (Url)</label>
+                            <input type="text" asp-for="ImageUrl" class="form-control" />
+                            <br />
+                            <label>Video (Embed Link)</label>
+                            <input type="text" asp-for="VideoUrl" class="form-control" />
+                            <br />
+                            <label>Açıklama</label>
+                            <textarea rows="5" asp-for="Description" class="form-control"> </textarea>
+                            <br />
+                            <button class="btn btn-primary">Kaydet</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

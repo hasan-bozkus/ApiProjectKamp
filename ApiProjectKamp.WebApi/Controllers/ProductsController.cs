@@ -47,7 +47,7 @@ namespace ApiProjectKamp.WebApi.Controllers
             }
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteProduct(int id)
         {
             var values = _apiContext.Products.Find(id);

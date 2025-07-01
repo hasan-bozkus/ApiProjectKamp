@@ -1,0 +1,43 @@
+﻿@model CreateProductDto
+@{
+    ViewData["Title"] = "CreateProduct";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<section class="section">
+    <div class="section-body">
+        <div class="row">
+            <div class="col-12 col-md-12 col-lg-6">
+
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Ürün Ekleme Sayfası</h4>
+                    </div>
+                    <div class="card-body">
+                        <form method="post">
+                            <label>Ürün Adı</label>
+                            <input type="text" asp-for="ProductName" class="form-control" />
+                            <br />
+                            <label>Ürün Fiyatı</label>
+                            <input type="text" asp-for="Price" class="form-control" />
+                            <br />
+                            <label>Ürün Kategorisi</label>
+                            <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.categoryValues">
+                               <option value="">--Kategori Seçiniz--</option>
+                            </select>
+                            <br />
+                            <label>Ürün Görseli (URL)</label>
+                            <input type="text" asp-for="ImageUrl" class="form-control" />
+                            <br />
+                            <label>Ürün Açıklaması</label>
+                            <textarea rows="5" asp-for="ProductDescription" class="form-control"> </textarea>
+                            <br />
+                            <button class="btn btn-primary">Kaydet</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
