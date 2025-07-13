@@ -40,7 +40,7 @@ namespace ApiProjectKamp.WebApi.Controllers
             return Ok("Silme işlemi başarılı.");
         }
 
-        [HttpGet("GetTestimonial")]
+        [HttpGet("GetTestimonial/{id}")]
         public IActionResult GetTestimonial(int id)
         {
             var values = _context.Testimonials.Find(id);

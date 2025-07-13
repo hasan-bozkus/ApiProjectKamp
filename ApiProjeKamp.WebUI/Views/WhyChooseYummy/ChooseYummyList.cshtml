@@ -1,0 +1,49 @@
+﻿@model List<ResultWhyChooseYummyDto>
+@{
+    ViewData["Title"] = "ChooseYummyList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<section class="section">
+    <div class="section-body">
+        <div class="row">
+            <div class="col-12 col-md-12 col-lg-6">
+
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Neden Bizi Seçmelisiniz Listesi</h4>
+                    </div>
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Başlık</th>
+                                    <th scope="col">Açıklama</th>
+                                    <th scope="col">Sil</th>
+                                    <th scope="col">Güncelle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    count++;
+
+                                    <tr>
+                                        <th scope="row">@item.Title</th>
+                                        <td>@item.Description</td>
+                                        <td><a href="/WhyChooseYummy/DeleteChooseYummy/@item.ServiceId" class="btn btn-danger">Sil</a></td>
+                                        <td><a href="/WhyChooseYummy/UpdateChooseYummy/@item.ServiceId" class="btn btn-success">Güncelle</a></td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <a href="/WhyChooseYummy/CreateChooseYummy" class="btn btn-info">Yeni Alan Oluştur</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+

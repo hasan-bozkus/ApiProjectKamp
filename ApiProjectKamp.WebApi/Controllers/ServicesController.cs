@@ -40,7 +40,7 @@ namespace ApiProjectKamp.WebApi.Controllers
             return Ok("Servis silme işlemi başarılı.");
         }
 
-        [HttpGet("GetService")]
+        [HttpGet("GetService/{id}")]
         public IActionResult GetService(int id)
         {
             var values = _context.Services.Find(id);

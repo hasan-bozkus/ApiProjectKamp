@@ -42,7 +42,7 @@ namespace ApiProjectKamp.WebApi.Controllers
             return Ok("Silme işlemi başarılı.");
         }
 
-        [HttpGet("GetYummyEvent")]
+        [HttpGet("GetYummyEvent/{id}")]
         public IActionResult GetYummyEvent(int id)
         {
             var values = _context.YummyEvents.Find(id);
