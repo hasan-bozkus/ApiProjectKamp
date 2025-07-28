@@ -1,9 +1,11 @@
 ﻿using ApiProjectKamp.WebApi.Dtos.AboutDtos;
 using ApiProjectKamp.WebApi.Dtos.CategoryDtos;
 using ApiProjectKamp.WebApi.Dtos.FeaturesDtos;
+using ApiProjectKamp.WebApi.Dtos.ImageDtos;
 using ApiProjectKamp.WebApi.Dtos.MessageDtos;
 using ApiProjectKamp.WebApi.Dtos.NotificationDtos;
 using ApiProjectKamp.WebApi.Dtos.ProductDtos;
+using ApiProjectKamp.WebApi.Dtos.ReservationDtos;
 using ApiProjectKamp.WebApi.Entities;
 using AutoMapper;
 
@@ -38,6 +40,16 @@ namespace ApiProjectKamp.WebApi.Mapping
             CreateMap<About, CreateAboutDto>().ReverseMap();
             CreateMap<About, UpdateAboutDto>().ReverseMap();
             CreateMap<About, GetAboutByIdDto>().ReverseMap();
+
+            CreateMap<Reservation, CreateReservationDto>().ReverseMap();
+            CreateMap<Reservation, ResultReservationDto>().ReverseMap();
+            CreateMap<Reservation, UpdateReservationDto>().ReverseMap();
+            CreateMap<Reservation, GetReservationByIdDto>().ReverseMap();
+
+            CreateMap<Image, CreateImageDto>().ReverseMap();
+            CreateMap<Image, ResultImageDto>().ReverseMap();
+            CreateMap<Image, UpdateImageDto>().ReverseMap();
+            CreateMap<Image, GetImageByIdDto>().ReverseMap();
         }
     }
 }
