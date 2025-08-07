@@ -1,0 +1,43 @@
+﻿@model UpdateMessageDto
+@{
+    ViewData["Title"] = "UpdateMessage";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<section class="section">
+    <div class="section-body">
+        <div class="row">
+            <div class="col-12 col-md-12 col-lg-6">
+
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Mesaj Güncelleme Sayfası</h4>
+                    </div>
+                    <div class="card-body">
+                        <form method="post">
+
+                            <input type="hidden" asp-for="MessageId" />
+
+                            <label>Gönderici Ad Soyad</label>
+                            <input type="text" asp-for="NameSurname" class="form-control" />
+                            <br />
+                            <label>E-Posta</label>
+                            <input type="text" asp-for="Email" class="form-control" />
+                            <br />
+                            <label>Konu</label>
+                            <input type="text" asp-for="Subject" class="form-control" />
+                            <br />
+                            <label>Mesaj İçeriği</label>
+                            <textarea rows="5" asp-for="MessageDetails" class="form-control"> </textarea>
+                            <br />
+                            <button class="btn btn-primary">Kaydet</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
