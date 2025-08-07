@@ -39,7 +39,7 @@ namespace ApiProjectKamp.WebApi.Controllers
             return Ok("İletişim bilgisi sisteme başarıyla eklendi.");
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete]
         public IActionResult DeleteContact(int id)
         {
             var value = _context.Contacts.Find(id);
@@ -48,7 +48,7 @@ namespace ApiProjectKamp.WebApi.Controllers
             return Ok("Silme işlemi başarılı");
         }
 
-        [HttpGet("GetContact/{id}")]
+        [HttpGet("GetContact")]
         public IActionResult GetContact(int id)
         {
             var value = _context.Contacts.Find(id);
