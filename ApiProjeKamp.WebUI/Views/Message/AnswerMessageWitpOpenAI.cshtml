@@ -1,0 +1,37 @@
+﻿@model GetMessageByIdDto
+@{
+    ViewData["Title"] = "AnswerMessageWitpOpenAI";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<section class="section">
+    <div class="section-body">
+        <div class="row">
+            <div class="col-12 col-md-12 col-lg-12">
+
+                <div class="card">
+                    <div class="card-header">
+                        <h4>OpenAI ile otomatik mesaj yanıt Sayfası</h4>
+                    </div>
+                    <div class="card-body">
+                        <form method="post">
+
+                            <input type="hidden" asp-for="MessageId" />
+
+                            <label>Müşteri Mesajı</label>
+                            <textarea rows="12" style="height:200px !important" asp-for="MessageDetails" class="form-control"> </textarea>
+                            <br />
+
+                            <label>OpenAI Otomatik Cevabı</label>
+                            <textarea rows="12" style="height:200px !important" class="form-control">@Html.Raw(@ViewBag.answerAI.ToString()) </textarea>
+                            <br />
+
+                            <button class="btn btn-primary">Cevabı E-Posta Mesajı Olarak Gönder</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
