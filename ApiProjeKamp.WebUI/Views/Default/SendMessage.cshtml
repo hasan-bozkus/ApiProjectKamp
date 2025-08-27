@@ -1,0 +1,29 @@
+﻿@model CreateMessageDto
+
+<form asp-action="SendMessage" asp-controller="Default" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="600">
+    <div class="row gy-4">
+
+        <div class="col-lg-4 col-md-6">
+            <input type="text" asp-for="NameSurname" class="form-control" id="name" placeholder="Adınız Soyadınız" required="">
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <input type="email" class="form-control" asp-for="Email" id="email" placeholder="E-Posta Adresiniz" required="">
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <input type="text" class="form-control" asp-for="Subject" id="phone" placeholder="Konu" required="">
+        </div>
+
+        <div class="form-group mt-3">
+            <textarea class="form-control" asp-for="MessageDetails" rows="5" placeholder="Mesajınız"></textarea>
+        </div>
+
+        <div class="col-md-12 text-center">
+            <div class="loading">Yükleniyor</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Mesjınız başarıyla gönderildi! En kısa zamanda sizinle iletişime geçilecektir.</div>
+
+            <button type="submit">Gönder</button>
+        </div>
+
+    </div>
+</form><!-- End Contact Form -->
