@@ -4,6 +4,7 @@ using ApiProjectKamp.WebApi.Entities;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace ApiProjectKamp.WebApi.Controllers
 {
@@ -59,7 +60,34 @@ namespace ApiProjectKamp.WebApi.Controllers
             _context.Reservations.Update(result);
             _context.SaveChanges();
             return Ok("Rezervasyon güncelleme işlemi başarılı.");
+        }
 
+        [HttpGet("GetTotalReservationCount")]
+        public async Task<IActionResult> GetTotalReservationCount()
+        {
+            var value = await _context.Reservations.CountAsync();
+            return Ok(value);
+        }
+
+        [HttpGet("GetTotalCustomerCount")]
+        public async Task<IActionResult> GetTotalCustomerCount()
+        {
+            var value = await _context.Reservations.SumAsync(x => x.CountofPeople);
+            return Ok(value);
+        }
+
+        [HttpGet("GetPendingReservation")]
+        public async Task<IActionResult> GetPendingReservation()
+        {
+            var value = await _context.Reservations.Where(x => x.ReservationStatus == "Onay Bekliyor").CountAsync();
+            return Ok(value);
+        }
+
+        [HttpGet("GetApprovedReservation")]
+        public async Task<IActionResult> GetApprovedReservation()
+        {
+            var value = await _context.Reservations.Where(x => x.ReservationStatus == "Onaylandı").CountAsync();
+            return Ok(value);
         }
     }
 }

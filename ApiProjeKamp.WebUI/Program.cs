@@ -1,7 +1,14 @@
+using ApiProjeKamp.WebUI.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddHttpClient();
+builder.Services.AddSignalR();
+builder.Services.AddHttpClient("openai", c =>
+{
+    c.BaseAddress = new Uri("https://api.openai.com");
+});
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -26,5 +33,6 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+app.MapHub<ChatHub>("/chathub");
 
 app.Run();

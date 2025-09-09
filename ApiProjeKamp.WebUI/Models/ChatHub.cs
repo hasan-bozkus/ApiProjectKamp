@@ -9,7 +9,7 @@ namespace ApiProjeKamp.WebUI.Models
 {
     public class ChatHub : Hub
     {
-        private const string apiKey = "";
+        private const string apiKey = "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";
         private const string modelGpt = "gpt-4o-mini";
         private readonly IHttpClientFactory _httpClientFactory;
 
@@ -57,7 +57,7 @@ namespace ApiProjeKamp.WebUI.Models
                 model = modelGpt,
                 messages = history,
                 stream = true,
-                tumperature = 0.2
+                temperature = 0.2
             };
 
             using var req = new HttpRequestMessage(HttpMethod.Post, "v1/chat/completions");
