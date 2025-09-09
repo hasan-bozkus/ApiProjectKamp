@@ -34,6 +34,7 @@ namespace ApiProjeKamp.WebUI.Controllers
         {
 
             var client = new HttpClient();
+            //anahtar ezildi
             var apiKey = "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";
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiKey);
             try
