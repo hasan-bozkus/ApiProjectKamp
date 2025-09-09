@@ -9,6 +9,7 @@ namespace ApiProjeKamp.WebUI.Models
 {
     public class ChatHub : Hub
     {
+        // anahtar ezildi
         private const string apiKey = "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";
         private const string modelGpt = "gpt-4o-mini";
         private readonly IHttpClientFactory _httpClientFactory;
