@@ -1,28 +1,31 @@
-﻿using ApiProjeKamp.WebUI.Models;
+﻿using ApiProjeKamp.WebUI.Dtos.ReservationDtos;
+using ApiProjeKamp.WebUI.Models;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace ApiProjeKamp.WebUI.ViewComponents.DashboardViewComponents
 {
     public class _DashboardMainChartComponentPartial : ViewComponent
     {
+        private readonly IHttpClientFactory _httpClientFactory;
+
+        public _DashboardMainChartComponentPartial(IHttpClientFactory httpClientFactory)
+        {
+            _httpClientFactory = httpClientFactory;
+        }
+
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            var vm = new RevenueChartViewModel
-            {
-                Labels = new List<string> { "Jan", "Feb", "Mar", "Apr", "May", "Jun" },
-                Income = new List<int> { 5, 15, 14, 36, 32, 32 },
-                Expense = new List<int> { 7, 11, 30, 18, 25, 13 },
-                WeeklyEarnings = 675,
-                MonthlyEarnings = 1587,
-                YearlyEarnings = 45965,
-                TotalCustomers = 8257,
-                TotalIncome = 9857,
-                ProjectCompleted = 28,
-                TotalExpense = 6287,
-                NewCustomers = 684
-            };
 
-            return View(vm);
+            var client = _httpClientFactory.CreateClient();
+            client.BaseAddress = new Uri("https://localhost:44349/"); // API adresin burası olacak
+
+            var response = await client.GetAsync("api/Reservations/GetReservationStats");
+            var json = await response.Content.ReadAsStringAsync();
+
+            var data = JsonConvert.DeserializeObject<List<ReservationChartDto>>(json);
+
+            return View(data);
         }
     }
 }

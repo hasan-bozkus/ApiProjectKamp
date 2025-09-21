@@ -6,15 +6,20 @@
         public List<int> Income { get; set; } = new();
         public List<int> Expense { get; set; } = new();
 
-        // Alt kutucuk verileri
-        public decimal WeeklyEarnings { get; set; }
-        public decimal MonthlyEarnings { get; set; }
-        public decimal YearlyEarnings { get; set; }
+        //rezervasonlardan hesaplanacak ek veriler
+        public int TotalReservations { get; set; }
+        public int ActiveReservations { get; set; }
+        public int CancelledReservations { get; set; }
 
-        public int TotalCustomers { get; set; }
-        public decimal TotalIncome { get; set; }
-        public int ProjectCompleted { get; set; }
-        public decimal TotalExpense { get; set; }
-        public int NewCustomers { get; set; }
+        // Alt kutucuk verileri
+        //public decimal WeeklyEarnings { get; set; }
+        //public decimal MonthlyEarnings { get; set; }
+        //public decimal YearlyEarnings { get; set; }
+
+        //public int TotalCustomers { get; set; }
+        //public decimal TotalIncome { get; set; }
+        //public int ProjectCompleted { get; set; }
+        //public decimal TotalExpense { get; set; }
+        //public int NewCustomers { get; set; }
     }
 }
