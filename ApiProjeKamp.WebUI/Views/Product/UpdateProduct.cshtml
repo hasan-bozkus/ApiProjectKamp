@@ -25,7 +25,7 @@
                             <input type="text" asp-for="Price" class="form-control" />
                             <br />
                             <label>Ürün Kategorisi</label>
-                            <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.categoryValues">
+                            <select asp-for="CategoryId" class="form-control" asp-items="@ViewBag.categoryValues">
                                 <option value="">--Kategori Seçiniz--</option>
                             </select>     
                             <br />

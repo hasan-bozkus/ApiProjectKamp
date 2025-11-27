@@ -1,0 +1,69 @@
+﻿@model List<ResultContactDto>
+<section id="contact" class="contact section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+        <h2>İletişim</h2>
+        <p><span>Yardıma İhtiyacınız Var Mı?</span> <span class="description-title">Bize Yazın</span></p>
+    </div>
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        @foreach (var item in Model)
+        {
+            <div class="mb-5">
+                <iframe style="width: 100%; height: 400px;" src="@item.MapLocation" frameborder="0" allowfullscreen=""></iframe>
+            </div>
+
+            <div class="row gy-4">
+
+                <div class="col-md-6">
+                    <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="200">
+                        <i class="icon bi bi-geo-alt flex-shrink-0"></i>
+                        <div>
+                            <h3>Adres</h3>
+                            <p>@item.Address</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="300">
+                        <i class="icon bi bi-telephone flex-shrink-0"></i>
+                        <div>
+                            <h3>Telefon</h3>
+                            <p>@item.Phone</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="400">
+                        <i class="icon bi bi-envelope flex-shrink-0"></i>
+                        <div>
+                            <h3>E-Posta</h3>
+                            <p>@item.Email</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="500">
+                        <i class="icon bi bi-clock flex-shrink-0"></i>
+                        <div>
+                            <h3>Çalışma Saatlerimiz<br></h3>
+                            <p>@Html.Raw(item.OpenHours)</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        }
+
+        @await Html.PartialAsync("~/Views/Default/SendMessage.cshtml", new CreateMessageDto())
+
+
+    </div>
+
+</section>
+@*<strong>Mon-Sat:</strong> @item.OpenHours <strong>Pazar:</strong> Kapalı*@

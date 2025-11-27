@@ -1,4 +1,5 @@
 ﻿using ApiProjeKamp.WebUI.Dtos.MessageDtos;
+using ApiProjeKamp.WebUI.Dtos.ReservationDtos;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Net.Http;
@@ -18,6 +19,7 @@ namespace ApiProjeKamp.WebUI.Controllers
             _httpClientFactory = httpClientFactory;
         }
 
+        [HttpGet]
         public IActionResult Index()
         {
             return View();
@@ -70,18 +72,18 @@ namespace ApiProjeKamp.WebUI.Controllers
                 if (toxicResponseString.TrimStart().StartsWith("["))
                 {
                     var toxicDoc = JsonDocument.Parse(toxicResponseString);
-                    foreach(var item in toxicDoc.RootElement[0].EnumerateArray())
+                    foreach (var item in toxicDoc.RootElement[0].EnumerateArray())
                     {
                         string label = item.GetProperty("label").GetString();
                         double score = item.GetProperty("score").GetDouble();
 
-                        if(score > 0.5)
+                        if (score > 0.5)
                         {
                             createMessageDto.Status = "Toksik Mesaj";
                         }
                     }
                 }
-                if(string.IsNullOrEmpty(createMessageDto.Status))
+                if (string.IsNullOrEmpty(createMessageDto.Status))
                 {
                     createMessageDto.Status = "Mesaj Alındı";
                 }
@@ -101,6 +103,23 @@ namespace ApiProjeKamp.WebUI.Controllers
             if (responseMesasge.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index", "Default");
+            }
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Index(CreateReservationDto createReservationDto)
+        {
+            createReservationDto.ReservationStatus = "Onay Bekliyor";
+
+            var client = _httpClientFactory.CreateClient();
+            var jsonData = JsonConvert.SerializeObject(createReservationDto);
+            var stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
+            var responseMesasge = await client.PostAsync("https://localhost:44349/api/Reservations", stringContent);
+            if (responseMesasge.IsSuccessStatusCode)
+            {
+                await Task.Delay(5000);
+                return RedirectToAction("Index#chefs");
             }
             return View();
         }

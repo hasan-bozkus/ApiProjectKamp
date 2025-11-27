@@ -40,7 +40,7 @@ namespace ApiProjectKamp.WebApi.Controllers
             return Ok("Şef sistemden başarıyla silindi.");
         }
 
-        [HttpGet("GetChef")]
+        [HttpGet("GetChef/{id}")]
         public IActionResult GetChef(int id)
         {
             var values = _context.Chefs.Find(id);

@@ -75,9 +75,22 @@ namespace ApiProjeKamp.WebUI.Controllers
         public async Task<IActionResult> UpdateProduct(int id)
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync($"https://localhost:44349/api/Products/GetProduct/{id}");
+            var responseMessage = await client.GetAsync("https://localhost:44349/api/Categories");
+
             var jsonData = await responseMessage.Content.ReadAsStringAsync();
-            var value = JsonConvert.DeserializeObject<UpdateProductDto>(jsonData);
+            var values = JsonConvert.DeserializeObject<List<ResultCategoryDto>>(jsonData);
+            List<SelectListItem> categoryValues = (from x in values
+                                                   select new SelectListItem
+                                                   {
+                                                       Text = x.CategoryName,
+                                                       Value = x.CategoryId.ToString()
+                                                   }).ToList();
+            ViewBag.categoryValues = categoryValues;
+
+            var clientProduct = _httpClientFactory.CreateClient();
+            var responseProductMessage = await clientProduct.GetAsync($"https://localhost:44349/api/Products/GetProduct/{id}");
+            var jsonProductData = await responseProductMessage.Content.ReadAsStringAsync();
+            var value = JsonConvert.DeserializeObject<UpdateProductDto>(jsonProductData);
             return View(value);
         }
 
