@@ -10,5 +10,7 @@
         public string Priority { get; set; }
         public string Details { get; set; }
         public string ReservationStatus { get; set; }
+        public int? PersonCount { get; set; }
+        public string? Email { get; set; }
     }
 }
