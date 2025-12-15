@@ -18,7 +18,6 @@ yummy Api Proje Kampı; Asp.Net Core 6.0 Api - Mvc, Entity Framework Core, Open 
 💎 Open AI: /v1/chat/completions - gpt-4.1-mini (Dashboard Menü Oluşturma) <br />
 💎 Anthropic Claude: Projenin Tasarımsal Düzenlenmesi <br />
 💎 SignalR - (Delta, Choice ve Chat Stream Chunk) <br />
-💎 X.PagedList (Sayfalama) <br />
 💎 Bootstrap <br />
 💎 JavaScript (JQuery) <br />
 💎 Html - Css <br />
