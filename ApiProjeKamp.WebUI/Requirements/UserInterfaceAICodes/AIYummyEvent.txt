@@ -11,12 +11,12 @@
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
         border: none;
     }
-
+    
     .modern-table {
         border-collapse: separate;
         border-spacing: 0;
     }
-
+    
     .modern-table thead th {
         background: linear-gradient(135deg, #f8f9ff 0%, #e8ecff 100%);
         color: #667eea;
@@ -28,31 +28,31 @@
         border: none;
         border-bottom: 2px solid #667eea;
     }
-
+    
     .modern-table thead th:first-child {
         border-top-left-radius: 10px;
     }
-
+    
     .modern-table thead th:last-child {
         border-top-right-radius: 10px;
     }
-
+    
     .modern-table tbody tr {
         transition: all 0.3s ease;
         border-bottom: 1px solid #f0f0f0;
     }
-
+    
     .modern-table tbody tr:hover {
         background-color: #f8f9ff;
         transform: scale(1.01);
         box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
     }
-
+    
     .modern-table tbody td {
         padding: 1rem;
         vertical-align: middle;
     }
-
+    
     .event-icon {
         width: 45px;
         height: 45px;
@@ -64,7 +64,7 @@
         color: white;
         font-size: 1.2rem;
     }
-
+    
     .event-number {
         width: 35px;
         height: 35px;
@@ -77,20 +77,20 @@
         font-weight: bold;
         font-size: 0.9rem;
     }
-
+    
     .event-title {
         color: #333;
         font-size: 1rem;
         font-weight: 600;
     }
-
+    
     .event-description {
         color: #666;
         font-size: 0.9rem;
         line-height: 1.5;
         max-width: 450px;
     }
-
+    
     .price-badge {
         background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
         color: white;
@@ -101,7 +101,7 @@
         display: inline-block;
         box-shadow: 0 2px 8px rgba(67, 233, 123, 0.3);
     }
-
+    
     .modern-btn {
         padding: 0.5rem 1rem;
         border-radius: 8px;
@@ -113,27 +113,27 @@
         align-items: center;
         gap: 0.5rem;
     }
-
+    
     .modern-btn:hover {
         transform: translateY(-2px);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
-
+    
     .btn-edit {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         color: white;
     }
-
+    
     .btn-delete {
         background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
         color: white;
     }
-
+    
     .btn-view {
         background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
         color: white;
     }
-
+    
     .btn-create {
         background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
         color: white;
@@ -238,3 +238,4 @@
     </div>
 </section>
 
+-----------------------------------------------

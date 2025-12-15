@@ -9,7 +9,7 @@ namespace ApiProjeKamp.WebUI.ViewComponents.DashboardViewComponents
 {
     public class _DashboardAIDailyMenuSuggestionComponentPartial : ViewComponent
     {
-        private const string _openAIApiKey = "anahtar ezildi";
+        private const string _openAIApiKey = "anahtar ezildi...";
         private readonly IHttpClientFactory _httpClientFactory;
 
         public _DashboardAIDailyMenuSuggestionComponentPartial(IHttpClientFactory httpClientFactory)
@@ -24,15 +24,15 @@ namespace ApiProjeKamp.WebUI.ViewComponents.DashboardViewComponents
             openAiClient.DefaultRequestHeaders.Authorization =
                 new AuthenticationHeaderValue("Bearer", _openAIApiKey);
 
-            string prompt = @"4 farklı dünya mutfağından tamamen rastgele günlük menü oluştur.
+            string prompt = @"4 farklı dünya mutfağından tamamen rastgele günlük menü oluştur. Burada ülke isimleri aşağıda verilecektir.
 
 ÖNEMLİ KURALLAR:
-- Mutlaka 4 FARKLI ülke mutfağı seç.
+- Mutlaka aşağıda veridğim 4 FARKLI ülke mutfağı seç.
 - Daha önce seçtiğin mutfakları tekrar etme (iç mantığında çeşitlilik üret).
-- Popüler olmayan mutfaklardan da seçebilirsin (örneğin Peru, Tayland, Fas, İran, Kore, Şili, Portekiz, Endonezya, Lübnan vb.).
+- Seçim Yapılacak Ülkeler Türkiye, Fransa, Almanya, İtalya, İspanya, Kore, Bulgaristan, Gürcistan, Çin, Japonya, Tayland, Fas, İran, Kore, Şili, Portekiz, Endonezya, Lübnan vb.
 - Ülkeleri HER SEFERİNDE FARKLI seç.
 - Tüm içerik TÜRKÇE olacak.
-- Ülke adını Türkçe yaz (ör: “Peru Mutfağı”).
+- Ülke adını Türkçe yaz (ör: “Kore Mutfağı”).
 - ISO Country Code zorunlu (ör: PE, TH, MA, IR, KR vb.)
 - Örnek vermiyorum, tamamen özgün üret.
 - Cevap sadece geçerli JSON olsun.
